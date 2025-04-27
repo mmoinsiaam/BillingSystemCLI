@@ -1,10 +1,26 @@
 package main
 
-import "fmt"
+import (
+	"bufio"
+	"fmt"
+	"os"
+	"strings"
+)
+
+// takes in user input to create bill
+func createBill() bill {
+	reader := bufio.NewReader(os.Stdin)
+
+	fmt.Print("Enter bill name: ")
+	name, _ := reader.ReadString('\n')
+	name = strings.TrimSpace(name)
+	b := newBill(name)
+	fmt.Println("Created the bill - ", b.name)
+	return b
+}
 
 func main() {
-	b := newBill("Mario's Bill")
-	b.addItem("pie", 5.89)
-	b.updateTip(6.77)
-	fmt.Println(b.format())
+	mybill := createBill()
+
+	fmt.Println(mybill)
 }
