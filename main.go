@@ -3,9 +3,6 @@ package main
 import "fmt"
 
 func main() {
-
-	sayHello("mario")
-	for _, v := range points {
-		fmt.Println(v)
-	}
+	b := newBill("Mario's Bill")
+	fmt.Println(b)
 }
