@@ -1,0 +1,5 @@
+Bill breakdown: 
+pie:                      ...$3.99
+apple:                    ...$4.23
+Tip:                      ...$33.20
+Total:                    ...$41.42
